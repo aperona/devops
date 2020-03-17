@@ -15,6 +15,4 @@ workflows:
     build-and-test:
       jobs:
         - build-and-test
-        - run: npm install --global yo
-        - run: install --global generator-webapp
-        - run: yo webapp
+
