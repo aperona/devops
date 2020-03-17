@@ -9,10 +9,12 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install
+            - run: npm install --global yo
+            - run: npm install --global generator-webapp
+            - run: yo webapp
             - run: npm test
 workflows:
     build-and-test:
       jobs:
-        - build-and-test
+        - build
 
